@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Music Recommendation Tool</title>
+	<link rel="stylesheet" href="./stylesheets/home.css">
+	<link rel="stylesheet" href="./stylesheets/cover.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+	                       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+						   crossorigin="anonymous">
+    <style type="text/css">
+      #login, #loggedin {
+        display: none;
+      }
+      .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login" class="login">
+        <span class="login-span">Connect to Spotify for music recommendations.</span>
+        <a href="/login" class="login-button">
+		  <i class="fab fa-spotify"></i>
+		  <text class="login-text">LOG IN WITH SPOTIFY</text>
+		</a>
+      </div>
+      <div id="loggedin">
+        <div id="user-profile">
+        </div>
+      </div>
+	  
+      <script id="user-profile-template" type="text/x-handlebars-template">
+        <h1 class="title">Based on your Most Played Artists</h1>
+		<div class="favorite-artists">
+		  <ul>
+		    <li id="artist-0" class="artist"><div id="body-0" class="body"></div></li>
+		    <li id="artist-1" class="artist"><div id="body-1" class="body"></div></li>
+		    <li id="artist-2" class="artist"><div id="body-2" class="body"></div></li>
+		    <li id="artist-3" class="artist"><div id="body-3" class="body"></div></li>
+		    <li id="artist-4" class="artist"><div id="body-4" class="body"></div></li>
+		    <li id="artist-5" class="artist"><div id="body-5" class="body"></div></li>
+		    <li id="artist-6" class="artist"><div id="body-6" class="body"></div></li>
+		    <li id="artist-7" class="artist"><div id="body-7" class="body"></div></li>
+		    <li id="artist-8" class="artist"><div id="body-8" class="body"></div></li>
+		    <li id="artist-9" class="artist"><div id="body-9" class="body"></div></li>
+		    <li id="artist-10" class="artist"><div id="body-10" class="body"></div></li>
+		    <li id="artist-11" class="artist"><div id="body-11" class="body"></div></li>
+		    <li id="artist-12" class="artist"><div id="body-12" class="body"></div></li>
+			<li id="artist-13" class="artist"><div id="body-13" class="body"></div></li>
+		    <li id="artist-14" class="artist"><div id="body-14" class="body"></div></li>
+		    <li id="artist-15" class="artist"><div id="body-15" class="body"></div></li>
+		    <li id="artist-16" class="artist"><div id="body-16" class="body"></div></li>
+		    <li id="artist-17" class="artist"><div id="body-17" class="body"></div></li>
+		    <li id="artist-18" class="artist"><div id="body-18" class="body"></div></li>
+		    <li id="artist-19" class="artist"><div id="body-19" class="body"></div></li>
+		  </ul>
+		</div>
+      </div>
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="./scripts/auth.js"></script>
+	<script src="./scripts/resources.js"></script>
+	<script src="./scripts/main.js"></script>
+  </body>
+</html>
